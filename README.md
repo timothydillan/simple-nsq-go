@@ -21,15 +21,18 @@ Nsqd instances can handle multiple streams of data at one time. The NSQ system f
 2. go mod tidy
 
 --- MUST ---
-3. docker-compose up -d (sets up the necessary nsq binaries).
 
-4. go build producer.go
+3. go mod tidy
 
-5. go build consumer.go
+4. docker-compose up -d (sets up the necessary nsq binaries).
 
-6. Run ./consumer once.
+5. go build producer.go
 
-7. Run ./producer multiple times, or create a for loop.
+6. go build consumer.go
+
+7. Run ./consumer once.
+
+8. Run ./producer multiple times, or create a for loop.
 
 ## Stopping:
 
