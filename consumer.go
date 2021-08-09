@@ -55,7 +55,6 @@ func (h *messageHandler) HandleMessage(m *nsq.Message) error {
 	var request Message
 	if err := json.Unmarshal(m.Body, &request); err != nil {
 		log.Println("[HandleMessage][ERROR]: Failed to parse the incoming message body, Error:", err, "Message:", m.Body)
-		log.
 		// Returning a non-nil error will automatically send a REQ command to NSQ to re-queue the message.
 		return err
 	}
